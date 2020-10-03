@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+
+.i-login{
+  width: 300px;
+  height: 300px;
+}
+
+.bd-login{
+  border: 1px solid black;
+  padding: 0px;
+  border-radius: 10px;
+}
+
+.i-face{
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+}
+.i-face-rank{
+  width: 100px;
+  height: 100px;
+}
+.tbl tr:first-child td {
+  border-top: none;
+}
+.tbl tr:first-child th {
+  border-top: none;
+}
+
