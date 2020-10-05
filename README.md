@@ -1,4 +1,11 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Instructions for running the project
+
+1, run the command : npm install
+
+2, run the command : npm install react-scripts --save
+
+3, run the command : npm start 
+
 
 ## Available Scripts
 

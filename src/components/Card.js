@@ -16,6 +16,8 @@ class Card extends React.Component {
 
     render() {
         const {questions, users, id} = this.props
+        console.log(id)
+        console.log("*********")
         const question = questions[id]
         const user = users[question.author]
 
@@ -43,11 +45,10 @@ class Card extends React.Component {
     }
 }
 
-function mapStateToProps({questions, users}, {unanswer}) {
+function mapStateToProps({questions, users}) {
     return {
         questions,
-        users,
-        unanswer
+        users
     }
 }
 
