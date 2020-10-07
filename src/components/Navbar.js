@@ -39,13 +39,13 @@ class Navbar extends React.Component {
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link to='/addQuestion'>
+                                <Link to='/add'>
                                     <a className="nav-link">Add Question</a>
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link to='/rank'>
-                                    <a className="nav-link">Rank</a>
+                                <Link to='/leaderboard'>
+                                    <a className="nav-link">Leader Board</a>
                                 </Link>
                             </li>
                         </ul>

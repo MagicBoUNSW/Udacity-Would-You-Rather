@@ -14,6 +14,8 @@ import {listUsers} from "./store/actions/users";
 import {listQuestions} from "./store/actions/questions";
 import {hideLoading, showLoading} from "react-redux-loading-bar";
 import LoadingBar from 'react-redux-loading-bar'
+import PageNotFound from "./components/404";
+import PrivateRoute from "./components/PrivateRoute";
 
 class App extends React.Component {
     componentDidMount() {
@@ -32,12 +34,14 @@ class App extends React.Component {
                 <div>
                     <Navbar/>
                     <LoadingBar />
-                    <Route path="/login" exact render={() => <Login/>}/>
-                    <Route path="/" exact render={() => <Dashboard/>}/>
-                    <Route path="/addQuestion" exact render={() => <AddQuestion/>}/>
-                    <Route path="/rank" exact render={() => <Rank/>}/>
-                    <Route path="/question/:id" exact render={() => <Question/>}/>
-                    <Route path="/result" exact render={() => <Result/>}/>
+                    <Route path="/login" exact component={Login}/>
+                    <PrivateRoute path="/" exact component={Dashboard} />
+                    <PrivateRoute path="/add" exact component={AddQuestion}/>
+                    <PrivateRoute path="/leaderboard" exact component={Rank}/>
+                    <PrivateRoute path="/question/:id" exact component={Question}/>
+                    <PrivateRoute path="/result" exact component={Result}/>
+
+                    <PrivateRoute path="/pagenotfound" exact component={PageNotFound}/>
                 </div>
             </BrowserRouter>
         );

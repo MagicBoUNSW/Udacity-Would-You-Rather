@@ -11,6 +11,9 @@ class Login extends React.Component {
     state = {
         userId: null
     }
+    static defaultProps = {
+        location: null,
+    }
     handleLogin = (e) => {
         e.preventDefault()
         const {userId} = this.state
@@ -30,12 +33,11 @@ class Login extends React.Component {
     }
 
     render() {
-        const {verifyUser,users} = this.props
-
-        console.log(this.state.userId)
-        if (verifyUser !== null) {
+        const {verifyUser,users,location} = this.props
+        const { from } = location.state || { from: { pathname: '/' }}
+        if(verifyUser !== null) {
             return (
-                <Redirect to='/' />
+                <Redirect to={from} />
             )
         }
         const optionUsers = Object.keys(users).map((key) => {

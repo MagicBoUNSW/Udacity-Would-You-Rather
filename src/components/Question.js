@@ -38,7 +38,7 @@ class Question extends React.Component {
 
         if (questions[match.params.id] === undefined) {
             return (
-                <Redirect to='/login' />
+                <Redirect to='/pagenotfound' />
             )
         }
         const question = questions[match.params.id]
