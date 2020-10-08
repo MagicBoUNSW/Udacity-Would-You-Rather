@@ -14,8 +14,9 @@ class Navbar extends React.Component {
         dispatch(setlogOut())
     }
 
+
     render() {
-        const {verifyUser,users} = this.props
+        const {verifyUser,users,location} = this.props
         const user = users[verifyUser]
         console.log(user)
         if (verifyUser === null) {
